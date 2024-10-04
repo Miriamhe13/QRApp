@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Profesor
+    </ion-title>
+    <ion-buttons slot="end">
+      DarkMode
+      <ion-toggle slot="end" [checked]="darkMode" (ionChange)="toggleDarkMode()"></ion-toggle> | 
+      <ion-button [routerLink]="['/login']"><ion-icon name="log-out-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Profesor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-button expand="block">Generar QR</ion-button>
+    <br>
+    <qrcode [qrdata]="textoQr" [width]="256" ></qrcode>
+
+
+  </div>
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-title>Footer</ion-title>
+  </ion-toolbar>
+  </ion-footer>

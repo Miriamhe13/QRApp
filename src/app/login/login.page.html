@@ -1,0 +1,50 @@
+<ion-app [attr.theme]="darkMode ? 'darkMode' : ''">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>login</ion-title>
+      <ion-buttons slot="end">
+        DarkMode
+        <ion-toggle slot="end" [checked]="darkMode" (ionChange)="toggleDarkMode()"></ion-toggle>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">login</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <div class="form-login">
+      <div class="form-nav">
+        <ion-button (click)="profesor()" shape="round" color="warning">Profesor</ion-button>
+        <ion-button (click)="alumno()" shape="round" color="warning">Alumno</ion-button>
+      </div>
+
+      <div class="form-alumno" id="form-alumno">
+        <p>Ingreso Portal Alumno</p>
+        <ion-input label="Correo" label-placement="floating" fill="solid" placeholder="Ingresa tu correo"></ion-input>
+        <br><br><br>
+        <ion-input label="Contraseña" label-placement="floating" fill="solid" placeholder="Ingresa tu clave"></ion-input>
+        <br><br>
+        <ion-button [routerLink]="['/homeAlumno']" expand="block">Iniciar Sesion</ion-button>
+      </div>
+
+      <div class="form-profesor" id="form-profesor">
+        <p>Ingreso Portal Profesor</p>
+        <ion-input label="Correo" label-placement="floating" fill="solid" placeholder="Ingresa tu correo"></ion-input>
+        <br><br><br>
+        <ion-input label="Contraseña" label-placement="floating" fill="solid" placeholder="Ingresa tu clave"></ion-input>
+        <br><br>
+        <ion-button [routerLink]="['/homeProfesor']" expand="block">Iniciar Sesion</ion-button>
+      </div>
+    </div>
+    
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+    <ion-title>Footer</ion-title>
+    </ion-toolbar>
+    </ion-footer>
+</ion-app>
